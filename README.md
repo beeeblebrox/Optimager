@@ -7,3 +7,6 @@
 ## Defaults
 - **image width** - 800px
 
+> If you get ``Could not execute GraphicsMagick/ImageMagick`` install ImageMagick: ``sudo apt-get -y install graphicsmagick``
+
+
