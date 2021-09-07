@@ -8,7 +8,7 @@ const del           = require('del');
 
 /* Optimization */
 function optimization() {
-  return src(`${sourceFolder}/**/*.{jpg,png}`)
+  return src(`${sourceFolder}/**/*`)
   .pipe(imageResize({
     width : 800,
     height : 0,
