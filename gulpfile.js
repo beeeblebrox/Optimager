@@ -1,10 +1,12 @@
 const sourceFolder = 'src';
 const resultFolder = 'dist';
 
-const { series, parallel, src, dest, watch } = require('gulp');
-const imageResize   = require('gulp-image-resize');
-const imagemin      = require('gulp-imagemin');
-const del           = require('del');
+import pkg from 'gulp'
+const { gulp, series, parallel, src, dest, watch } = pkg
+
+import imageResize from 'gulp-image-resize'
+import imagemin    from 'gulp-imagemin'
+import del         from 'del'
 
 /* Optimization */
 function optimization() {
@@ -23,6 +25,6 @@ function optimization() {
 function clearResultFolder() {
   return del(resultFolder, { force: true })
 }
-
-exports.run   = optimization;
-exports.clear = clearResultFolder;
+export { optimization, clearResultFolder }
+export let run = optimization
+export let clear = clearResultFolder
